@@ -17,12 +17,12 @@ final : $(objects)
 -include $(depends)
 
 
-
 # 生成 .o 文件的规则
 $(objects) : %.o: %.c
 	gcc -c $(CFLAGS) $< -o $@
+	@echo generated $@
 
 # 清理规则
 .PHONY : clean
 clean :
-	del /F /Q final.exe *.o *.d
+	-del /F /Q final.exe *.o *.d

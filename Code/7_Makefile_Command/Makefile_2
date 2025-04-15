@@ -5,6 +5,13 @@ depends = $(objects:.o=.d)
 # 最终目标
 final : $(objects)
 	gcc -o final $(objects)
+	-mkdir build
+	@echo [1] exec command in one line
+	cd build && dir
+	cd ..
+	@echo [2] exec command in two lines
+	cd build 
+	dir
 
 # 生成 .d 文件的规则
 %.d: %.c
@@ -17,7 +24,6 @@ final : $(objects)
 -include $(depends)
 
 
-
 # 生成 .o 文件的规则
 $(objects) : %.o: %.c
 	gcc -c $(CFLAGS) $< -o $@
@@ -25,4 +31,4 @@ $(objects) : %.o: %.c
 # 清理规则
 .PHONY : clean
 clean :
-	del /F /Q final.exe *.o *.d
+	-del /F /Q final.exe *.o *.d
