@@ -41,7 +41,7 @@ clean :
 ```bash
 make
 ```
-可以生成上述的.o和.exe文件。
+可以生成上述的`.o`和`.exe`文件。
 
 + 运行命令
 
@@ -60,4 +60,4 @@ Makefile Star!
 ```bash
 make clean
 ```
-清空.o和.exe文件。
+清空`.o`和`.exe`文件。
