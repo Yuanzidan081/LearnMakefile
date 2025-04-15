@@ -9,4 +9,4 @@ func.o : func.c func.h
 	gcc -c func.c
 .PHONY : clean
 clean :
-	-del /F /Q final.exe $(objects)
+	-del /F /Q final.exe *.o

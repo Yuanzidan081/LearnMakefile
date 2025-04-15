@@ -29,10 +29,11 @@ func.o : func.c func.h
 	gcc -c func.c
 .PHONY : clean
 clean :
-	del /F /Q final.exe $(objects)
+	-del /F /Q final.exe $(objects)
 ```
 
-上面文件内容中，`.PHONY`表示，`clean` 是个伪目标文件。
+上面文件内容中，`.PHONY`表示，`clean` 是个伪目标文件。`del`命令前面加了一个小减号
+的意思就是，也许某些文件出现问题，但不要管，继续做后面的事。
 
 相关代码在**Code**文件夹下的**3_Makefile_PHONY**文件夹中。
 
