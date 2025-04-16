@@ -1,5 +1,6 @@
 SHELL = cmd.exe
 objects = main.o func.o
+# objects := $(wildcard *.o)
 
 final : $(objects)
 	gcc -o final $(objects)

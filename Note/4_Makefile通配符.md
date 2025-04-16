@@ -34,7 +34,7 @@ clean :
 
 注意上面的`-del /F /Q final.exe *.o`就使用了`*`通配符，意思是后缀为`.o`的文件都被清除掉。
 
-相关代码在**Code**文件夹下的**4_Makefile_star**文件夹中。
+相关代码在**Code**文件夹下的**4_Makefile_Star**文件夹中。
 
 + 运行命令
 

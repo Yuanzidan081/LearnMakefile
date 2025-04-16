@@ -1,0 +1,34 @@
+SHELL = cmd.exe
+foo = $(bar)
+bar = $(ugh)
+ugh = Huh?
+
+all :
+	@echo $(foo)
+
+nullstring :=  
+space := $(nullstring) # end-of-line
+comma := ,
+str := a$(space)b$(comma)c$(space)d
+Echo2:
+	@echo $(str)
+
+dir := /foo/bar     # directory to put the frobs in
+filepath := $(dir)/file
+Echo3:
+	@echo $(filepath)
+
+foo2 := brd
+foo2 ?= bar
+foo3 ?= bar
+Echo4:
+	@echo $(foo2) $(foo3)
+
+define two-lines
+@echo foo
+@echo $(bar)
+endef
+
+Echo5:
+	$(two-lines)
+
